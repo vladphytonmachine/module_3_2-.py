@@ -1,7 +1,7 @@
 def send_email (message , recipient , sender = "university.help@gmail.com"):
-    if '@' not in sender and not sender.endswith( (".com" , ".ru" , ".net" ) ): # .endswith - проверка последних символов
+    if '@' not in sender or not sender.endswith( (".com" , ".ru" , ".net" ) ): # .endswith - проверка последних символов
         print(f'Невозможно отправить письмо с адреса {recipient} на адрес {sender}')
-    elif '@' not in recipient and not recipient.endswith( (".com" , ".ru" , ".net" ) ):
+    elif '@' not in recipient or not recipient.endswith( (".com" , ".ru" , ".net" ) ):
         print(f'Невозможно отправить письмо с адреса {recipient} на адрес {sender}')
     elif sender == 'university.help@gmail.com':
         print( f'Письмо успешно отправлено с адреса {sender} на адрес {recipient}')
